@@ -1,0 +1,49 @@
+<nav id="sticky-header" class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/iitpl_logo.jpg" alt="Logo" height="40" /><br />
+      <b>IITPL.</b>
+    </a>
+
+    <!-- Mobile Toggle -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item"><span class="dot">•</span></li>
+        <li class="nav-item">
+          <a routerLink="/about-us" routerLinkActive="active" class="nav-link"
+            >About Us</a
+          >
+        </li>
+        <li class="nav-item"><span class="dot">•</span></li>
+        <li class="nav-item">
+          <a routerLink="/solutions" routerLinkActive="active" class="nav-link"
+            >Solutions</a
+          >
+        </li>
+        <li class="nav-item"><span class="dot">•</span></li>
+        <li class="nav-item">
+          <a routerLink="/blogs" routerLinkActive="active" class="nav-link"
+            >Blogs</a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact Button -->
+    <a routerLink="/contact" class="btn btn-dark contact-btn">Contact Us</a>
+  </div>
+</nav>

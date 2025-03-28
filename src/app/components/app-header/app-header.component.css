@@ -1,0 +1,49 @@
+/* Navbar Styling */
+.navbar {
+  background-color: white;
+  padding: 10px 0;
+}
+
+/* Center Navbar Links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Dot Separator */
+.navbar-nav .dot {
+  font-size: 18px;
+  color: black;
+  opacity: 0.5;
+}
+
+/* General Navbar Link Style */
+.nav-link {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  padding: 8px 15px;
+  border-radius: 20px; /* Rounded button effect */
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+/* Remove Underline Effect */
+.nav-link.active::after {
+  display: none;
+}
+
+/* Active State Like a Button */
+.nav-link.active {
+  /* background-color: rgba(0, 0, 0, 0.1); */
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2); /* Border for active state */
+}
+
+/* Contact Button */
+.contact-btn {
+  border-radius: 20px;
+  font-size: 14px;
+  padding: 8px 15px;
+}

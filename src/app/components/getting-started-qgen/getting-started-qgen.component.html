@@ -1,0 +1,37 @@
+<div class="getting-started-container">
+  <h2>Getting started with Q-gen</h2>
+  <p>
+    Optimize your routes with AI-driven mapping and real-time traffic analysis.
+    Save time, reduce costs, and boost efficiency.
+  </p>
+
+  <div class="cards-container">
+    <div
+      class="info-card"
+      *ngFor="let card of cards"
+      (mouseenter)="hoveredCard = card.image"
+      (mouseleave)="hoveredCard = ''"
+    >
+      <div class="card-content">
+        <div class="card-header">
+          <i class="bi" [ngClass]="card.icon"></i>
+        </div>
+        <div class="card-body mt-4">
+          <!-- <h3>{{ card.title }}</h3> -->
+          <p>{{ card.description }}</p>
+        </div>
+        <div class="card-footer">
+          <span>{{ card.footerText }}</span>
+          <i class="bi bi-box-arrow-in-right align-right"></i>
+
+        </div>
+      </div>
+      <img
+        *ngIf="hoveredCard === card.image"
+        class="hover-image"
+        [src]="card.image"
+        alt="Hovered Image"
+      />
+    </div>
+  </div>
+</div>

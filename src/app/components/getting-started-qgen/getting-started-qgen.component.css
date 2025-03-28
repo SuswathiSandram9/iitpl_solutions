@@ -1,0 +1,90 @@
+.getting-started-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.info-card {
+  height: 170px;
+  position: relative;
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Card Content - Left Aligned */
+.card-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Align content to the left */
+  padding: 20px;
+  z-index: 2;
+  color: black; /* Default text color */
+  text-align: left; /* Align text to the left */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Card Header - Icon Left Aligned */
+.card-header i {
+  font-size: 20px;
+  align-self: flex-start; /* Move icon to the left */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Card Body - Left Align Text */
+.card-body h3,
+.card-body p,
+.card-footer {
+  text-align: left;
+  font-family: 'Gabarito', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between; /* Push items to left and right */
+  align-items: center;
+  width: 100%;
+}
+
+/* Hover Effect - Make Text & Icon White */
+.info-card:hover .card-content {
+  color: white !important;
+}
+
+.info-card:hover .card-header i {
+  color: white !important;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Image Styles */
+.hover-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
