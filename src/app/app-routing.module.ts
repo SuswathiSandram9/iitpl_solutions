@@ -5,6 +5,7 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { SolutionsComponent } from './components/solutions/solutions.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AmexsComponent } from './components/amexs/amexs.component';
 
 const routes: Routes = [
   { path: '', component: HeroSectionComponent },  // Home Page
@@ -12,10 +13,16 @@ const routes: Routes = [
   { path: 'solutions', component: SolutionsComponent },  // Solutions Page
   { path: 'blogs', component: BlogsComponent },  // Blogs Page
   { path: 'contact', component: ContactUsComponent }, // Contact us Page
+  { path: 'amexs', component: AmexsComponent }, // Amexs Page
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled', // Scrolls to the top on route change
+    }),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

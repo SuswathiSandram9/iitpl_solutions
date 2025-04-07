@@ -13,7 +13,8 @@ import { SolutionsComponent } from './components/solutions/solutions.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { FormsModule } from '@angular/forms';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { GettingStartedQgenComponent } from './components/getting-started-qgen/getting-started-qgen.component'; 
+import { GettingStartedQgenComponent } from './components/getting-started-qgen/getting-started-qgen.component';
+import { AmexsComponent } from './components/amexs/amexs.component'; 
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { GettingStartedQgenComponent } from './components/getting-started-qgen/g
     SolutionsComponent,
     BlogsComponent,
     ContactUsComponent,
-    GettingStartedQgenComponent
+    GettingStartedQgenComponent,
+    AmexsComponent
   ],
   imports: [
     BrowserModule,

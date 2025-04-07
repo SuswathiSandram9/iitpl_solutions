@@ -1,0 +1,117 @@
+/* General Page Styling */
+.solutions-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background: #F2F2F2;
+  padding-bottom: 10px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: url("/assets/images/sections_hero.jpg") center/cover no-repeat;
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero-section h2 {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -2%;
+}
+
+.hero-section button {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: -2%;
+}
+
+/* Solutions Section */
+.solutions-content {
+  margin: 40px auto;
+  max-width: 800px;
+}
+
+.solutions-content h3 {
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: -2%;
+}
+
+.sub {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: -2%;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.solution-card {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  
+}
+
+.solution-card h4 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -2%;
+}
+.solution-card p {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -2%;
+}
+
+.solution-card:hover {
+  transform: scale(1.05);
+  background: blue;
+  color: white;
+}
+
+/* CTA Section */
+.cta-section {
+  background: #FFFFFF;
+  padding: 30px;
+  /* margin-bottom: 40px; */
+  margin: 40px auto;
+  border-radius: 10px;
+  max-width: 75%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-section h4 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -2%;
+}
+
+.cta-section button {
+  background: black;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -2%;
+}
