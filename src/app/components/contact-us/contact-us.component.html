@@ -21,7 +21,7 @@
     </div>
 
     <div class="contact-form">
-      <form target="_blank" action="https://formsubmit.co/suswathisandram98@gmail.com" method="POST">
+      <form ngNoForm target="_blank" action="https://formsubmit.co/suswathisandram98@gmail.com" method="POST" >
         <div class="form-group-row">
           <div class="form-group">
             <label for="firstName">First Name</label>
@@ -79,15 +79,16 @@
             alt="Flying Paper Plane"
             class="plane-icon"
           />
-          <button type="submit" class="send-message-btn">
-            <img src="assets/images/hand.svg" /> Send Message
-          </button>
+          
         </div>
+        <button type="submit" class="send-message-btn">
+          <img src="assets/images/hand.svg" /> Send Message
+        </button>
         <!-- Anti-spam hidden field -->
-        <input type="text" name="_honey" style="display: none" />
+        <!-- <input type="text" name="_honey" style="display: none" /> -->
 
         <!-- Disable CAPTCHA -->
-        <input type="hidden" name="_captcha" value="false" />
+        <!-- <input type="hidden" name="_captcha" value="false" /> -->
 
         <!-- Redirect after submit -->
         <!-- <input
@@ -95,6 +96,11 @@
           name="_next"
           value="https://yourwebsite.com/thank-you.html"
         /> -->
+        <script>
+          document.querySelector('form').addEventListener('submit', () => {
+            alert("Form submitted!");
+          });
+        </script>
       </form>
     </div>
   </div>
