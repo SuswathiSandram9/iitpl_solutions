@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './expertise.component.css'
 })
 export class ExpertiseComponent {
-
+  showVideo = false;
 }

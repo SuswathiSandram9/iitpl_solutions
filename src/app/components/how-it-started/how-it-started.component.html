@@ -6,7 +6,7 @@
       <div class="founder-img">
         <!-- <img src="assets/founder1.jpg" alt="Founder 1" /> -->
       </div>
-      <div class="founder-name">M Veerappan</div>
+      <div class="founder-name founder-name-left">M Veerappan</div>
     </div>
 
     <!-- Content -->
@@ -15,7 +15,7 @@
       <p>
         Before IITPL, Our Founder, M Veerappan, spent about two decades working
         with autonomous colleges, institutions, and universities as a security
-        printer through his company <a href="#">Image Security Printers</a>,
+        printer through his company <a class="link" data-bs-toggle="modal" data-bs-target="#ispModal">Image Security Printers</a>,
         responsible for supplying academic documents such as certificates,
         marksheets, report cards, transcripts, etc.
       </p>
@@ -26,10 +26,10 @@
         solutions as a leader in AI-driven products for education.
       </p>
       <div class="cta-buttons">
-        <button class="btn-primary me-3">
+        <button routerLink="/about-us" class="btn-primary me-3">
           Know More about us <i class="bi bi-chevron-right mt-2"></i>
         </button>
-        <button class="btn-secondary">
+        <button class="btn-secondary" data-bs-toggle="modal" data-bs-target="#ispModal">
           Image security printers? <i class="bi bi-box-arrow-up-right"></i>
         </button>
       </div>
@@ -40,7 +40,76 @@
       <div class="founder-img">
         <!-- <img src="assets/founder2.jpg" alt="Founder 2" /> -->
       </div>
-      <div class="founder-name">M Veerappan</div>
+      <div class="founder-name founder-name-right">M Veerappan</div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="ispModal" tabindex="-1" aria-labelledby="ispModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <div class="modal-header">
+        <h5 class="modal-title" id="ispModalLabel">Image Security Printers</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-4">
+        <div class="row">
+          <div class="col-md-6">
+            <h6>Products of ISP</h6>
+            <div class="product-item mb-3 d-flex align-items-start">
+              <img src="assets/icons/certificate.png" alt="icon" class="me-2" width="40" />
+              <div>
+                <strong>Secure Academic Certificates</strong>
+                <p class="mb-0 small">Degree Certificates, Transfer Certificates, Professional Certifications, and Rank Certificates</p>
+              </div>
+            </div>
+            <div class="product-item mb-3 d-flex align-items-start">
+              <img src="assets/icons/certificate.png" alt="icon" class="me-2" width="40" />
+              <div>
+                <strong>Mark Sheets & Transcripts</strong>
+                <p class="mb-0 small">Grade Cards, Consolidated Marks, and Transcripts with invisible inks and secure barcoding</p>
+              </div>
+            </div>
+            <div class="product-item mb-3 d-flex align-items-start">
+              <img src="assets/icons/certificate.png" alt="icon" class="me-2" width="40" />
+              <div>
+                <strong>Examination Booklets</strong>
+                <p class="mb-0 small">Answer Booklets, Drawing Booklets, and Practical Booklets with traceable seals to prevent tampering</p>
+              </div>
+            </div>
+            <!-- Repeat for other products -->
+          </div>
+          <div class="col-md-6">
+            <h5 class="fw-bold">Security Printing unlike anywhere</h5>
+            <p>Image Security Printers is a premier B2B security printing company specializing in high-integrity documentation and secure print technologies.
+              Serving educational institutions, universities, and government bodies, ISP delivers tamper-proof, verifiable printed products that uphold the highest standards of authenticity and compliance.</p>
+            <a href="#">Get ISP's Services →</a>
+          </div>
+        </div>
+      
+        <div class="row mt-4 text-center">
+          <div class="col">
+            <div class="card p-3">
+              <strong>INVISIBLE SECURITY ELEMENTS</strong>
+              <p class="small">Utilizes invisible inks, micro-text, or embedded QR codes that are only visible under specific conditions— only authorized personnel can validate authenticity.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-3">
+              <strong>TESLIN SUBSTRATE TECHNOLOGY</strong>
+              <p class="small">A synthetic material that resists water, tearing, and wear. Teslin enables long-lasting, secure documents with high print quality and embedded security layers that can’t be easily replicated.</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card p-3">
+              <strong>HOLOGRAM INTEGRATION</strong>
+              <p class="small">Each product can include custom holographic seals or strips, making counterfeiting virtually impossible and offering instant visual verification</p>
+            </div>
+          </div>
+          <!-- Repeat for other cards -->
+        </div>
+      </div>
+      
     </div>
   </div>
 </div>

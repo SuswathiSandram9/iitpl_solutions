@@ -4,11 +4,15 @@
     We offer innovative solutions to transform educational institutions. From AMEXS for efficient management to Q-GEN for AI-driven question papers and DOC-CHAIN for secure document handling, our cutting-edge technology ensures streamlined operations and enhanced productivity.
   </p>
 
-  <button class="cta-button">
-    Generate a free sample paper here
-    <img src="assets/images/sample_page.png" height="20" />
+  <button (click)="showVideo = !showVideo" class="cta-button">
+    {{ showVideo ? 'Close' : 'Watch demo here' }} <img src="assets/images/sample_page.png" height="20" />
   </button>
-
+  <div *ngIf="showVideo" class="video-container">
+    <video width="640" height="360" controls autoplay>
+      <source src="assets/videos/demo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
   <div class="card-container">
     <div class="card">
       <h3 class="card-title">Amexs</h3>
@@ -35,3 +39,5 @@
     </div>
   </div>
 </div>
+
+

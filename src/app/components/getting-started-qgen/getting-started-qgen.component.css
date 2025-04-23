@@ -3,6 +3,20 @@
   padding: 20px;
 }
 
+.title {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Gabarito', sans-serif;
+  margin-bottom: 10px;
+}
+
+.des {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'Gabarito', sans-serif;
+  color: #000000;
+}
+
 .cards-container {
   display: flex;
   justify-content: center;
