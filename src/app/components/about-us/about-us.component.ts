@@ -14,5 +14,30 @@ export class AboutUsComponent {
         'style', `padding-top: ${header.offsetHeight}px`
       );
     }
+
+    // Get the carousel inner container
+const carouselInner = document.querySelector('.carousel-inner');
+
+// Get the carousel control buttons
+const prevButton = document.querySelector('.carousel-control-prev');
+const nextButton = document.querySelector('.carousel-control-next');
+
+// Amount of scroll for each click (adjust if needed)
+const scrollAmount = 320; 
+
+// Handle left arrow click
+prevButton!.addEventListener('click', function() {
+  carouselInner!.scrollLeft -= scrollAmount; // Scroll left by defined amount
+});
+
+// Handle right arrow click
+nextButton!.addEventListener('click', function() {
+  carouselInner!.scrollLeft += scrollAmount; // Scroll right by defined amount
+});
+
+    
   }
+
+  
+  
 }

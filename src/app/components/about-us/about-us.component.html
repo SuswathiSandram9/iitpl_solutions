@@ -20,7 +20,6 @@
             <button class="btn-primary">
               Try AI for free <i class="bi bi-box-arrow-up-right"></i>
             </button>
-            
           </div>
           <!-- Chat Bubble UI -->
           <div class="chat-floating">
@@ -29,8 +28,7 @@
               <p class="mb-1">I’d like to create a question paper for Digital Signal Processing</p>
             </div>
             <div class="chat-message qgen">
-              <!-- 🤖 -->
-              <span> <img src="assets/images/iitpl_logo.jpg" alt="Logo" height="15px" /> Q-Gen</span>
+              <span><img src="assets/images/iitpl_logo.jpg" alt="Logo" height="15px" /> Q-Gen</span>
               <p class="mb-1">Mathematics for grade 10 is ready. Please upload the relevant lecture notes to align with your needs.</p>
             </div>
             <div class="chat-message you">
@@ -90,24 +88,47 @@
       </div>
     </div>
 
-    <!-- Left Arrow -->
-    <button
-      class="carousel-control-prev"
-      type="button"
-      data-bs-target="#aboutCarousel"
-      data-bs-slide="prev"
-    >
-      <i class="bi bi-arrow-left"></i>
-    </button>
+    <!-- Arrows placed below -->
+    <div class="carousel-controls-wrapper">
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#aboutCarousel"
+        data-bs-slide="prev"
+      >
+        <i class="bi bi-arrow-left"></i>
+      </button>
 
-    <!-- Right Arrow -->
-    <button
-      class="carousel-control-next"
-      type="button"
-      data-bs-target="#aboutCarousel"
-      data-bs-slide="next"
-    >
-      <i class="bi bi-arrow-right"></i>
-    </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#aboutCarousel"
+        data-bs-slide="next"
+      >
+        <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
   </div>
 </div>
+
+<script>
+  const carouselInner = document.querySelector('.carousel-inner');
+
+  function autoScroll() {
+    if (carouselInner) {
+      const maxScrollLeft = carouselInner.scrollWidth - carouselInner.clientWidth;
+      
+      if (carouselInner.scrollLeft >= maxScrollLeft) {
+        // If reached the end, go back to start
+        carouselInner.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        // Move forward by 300px (or your card width)
+        carouselInner.scrollBy({ left: 300, behavior: 'smooth' });
+      }
+    }
+  }
+
+  setInterval(autoScroll, 3000); // Scroll every 3 seconds
+</script>
+
+
