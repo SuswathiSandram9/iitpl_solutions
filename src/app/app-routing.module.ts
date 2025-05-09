@@ -6,6 +6,7 @@ import { SolutionsComponent } from './components/solutions/solutions.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AmexsComponent } from './components/amexs/amexs.component';
+import { ImageSecurityPrintersComponent } from './components/image-security-printers/image-security-printers.component';
 
 const routes: Routes = [
   { path: '', component: HeroSectionComponent },  // Home Page
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'blogs', component: BlogsComponent },  // Blogs Page
   { path: 'contact', component: ContactUsComponent }, // Contact us Page
   { path: 'amexs', component: AmexsComponent }, // Amexs Page
+  { path: 'image-security-printers', component: ImageSecurityPrintersComponent }, // Image Security Printers Page
 ];
 
 @NgModule({

@@ -7,15 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './hero-section.component.css'
 })
 export class HeroSectionComponent {
-  colors: string[] = ['#ffbe00', '#ff5733', '#33ff57', '#3357ff', '#ff33aa'];
-  currentColorIndex = 0;
-  currentColor = this.colors[0];
+
+  words = ['process', 'future', 'system'];
+  currentWord = this.words[0];
+  private wordIndex = 0;
 
   ngOnInit() {
     setInterval(() => {
-      this.currentColorIndex = (this.currentColorIndex + 1) % this.colors.length;
-      this.currentColor = this.colors[this.currentColorIndex];
-    }, 500); // Change every 10 seconds
+      this.wordIndex = (this.wordIndex + 1) % this.words.length;
+      this.currentWord = this.words[this.wordIndex];
+    }, 2000);
   }
 
   ngAfterViewInit() {

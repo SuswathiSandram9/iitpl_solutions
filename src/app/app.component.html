@@ -1,9 +1,7 @@
 <body>
-
   <app-app-header></app-app-header>
-  <!-- <div class="container">
-    <h1>Welcome to My Angular App</h1>
-  </div> -->
   <router-outlet></router-outlet>
-  <app-app-footer></app-app-footer>
+  <ng-container *ngIf="!isImageSecurityPage">
+    <app-app-footer></app-app-footer>
+  </ng-container>
 </body>

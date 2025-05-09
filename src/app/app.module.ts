@@ -14,7 +14,8 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { FormsModule } from '@angular/forms';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { GettingStartedQgenComponent } from './components/getting-started-qgen/getting-started-qgen.component';
-import { AmexsComponent } from './components/amexs/amexs.component'; 
+import { AmexsComponent } from './components/amexs/amexs.component';
+import { ImageSecurityPrintersComponent } from './components/image-security-printers/image-security-printers.component'; 
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { AmexsComponent } from './components/amexs/amexs.component';
     BlogsComponent,
     ContactUsComponent,
     GettingStartedQgenComponent,
-    AmexsComponent
+    AmexsComponent,
+    ImageSecurityPrintersComponent
   ],
   imports: [
     BrowserModule,
