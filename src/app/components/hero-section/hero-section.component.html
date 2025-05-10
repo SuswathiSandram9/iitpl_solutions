@@ -20,7 +20,13 @@
           </defs>
         </svg>
       </div>
-      <span class="animated-text">{{ currentWord }}</span>
+      <span class="word">{{ currentWord }}</span><span class="cursor"><svg width="20" height="100" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg">
+        <!-- Vertical bar -->
+        <rect x="4" y="0" width="1.5" height="32" fill="black" />
+        <!-- Circle (dot), overlaps the bottom edge of the bar -->
+        <circle cx="5" cy="32" r="2" fill="black" />
+      </svg>      
+      </span>
       <div class="wave-ribbon right-wave">
         <svg viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg" class="ribbon-svg">
           <path d="M0 25 Q 25 0, 50 25 T 100 25 T 150 25 T 200 25" 

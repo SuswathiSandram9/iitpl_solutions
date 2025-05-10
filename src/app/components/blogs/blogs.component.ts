@@ -8,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class BlogsComponent {
 
+  ngAfterViewInit() {
+    const header = document.getElementById('sticky-header');
+    if (header) {
+      document.querySelector('.coming-soon')!.setAttribute(
+        'style', `padding-top: ${header.offsetHeight}px`
+      );
+    }
+  }
+  
 }

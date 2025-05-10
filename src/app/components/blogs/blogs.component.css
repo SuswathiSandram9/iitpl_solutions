@@ -1,0 +1,26 @@
+/* Add if you're not using Tailwind CSS */
+.coming-soon {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.coming-soon h1 {
+  font-family: "Gabarito", sans-serif;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.coming-soon p {
+  font-size: 18px;
+  font-weight: 400;
+  color: #c9c9c9;
+  color: #666;
+}

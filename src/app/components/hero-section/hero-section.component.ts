@@ -8,15 +8,42 @@ import { Component } from '@angular/core';
 })
 export class HeroSectionComponent {
 
+  // words = ['process', 'future', 'system'];
+  // currentWord = this.words[0];
+  // private wordIndex = 0;
+
+  // ngOnInit() {
+  //   setInterval(() => {
+  //     this.wordIndex = (this.wordIndex + 1) % this.words.length;
+  //     this.currentWord = this.words[this.wordIndex];
+  //   }, 2000);
+  // }
+
   words = ['process', 'future', 'system'];
-  currentWord = this.words[0];
+  currentWord = '';
   private wordIndex = 0;
+  private charIndex = 0;
 
   ngOnInit() {
-    setInterval(() => {
-      this.wordIndex = (this.wordIndex + 1) % this.words.length;
-      this.currentWord = this.words[this.wordIndex];
-    }, 2000);
+    this.typeWord();
+  }
+
+  typeWord() {
+    const word = this.words[this.wordIndex];
+    if (this.charIndex < word.length) {
+      this.currentWord += word[this.charIndex];
+      this.charIndex++;
+      setTimeout(() => this.typeWord(), 150); // typing speed
+    } else {
+      setTimeout(() => this.nextWord(), 1500); // pause before next word
+    }
+  }
+
+  nextWord() {
+    this.wordIndex = (this.wordIndex + 1) % this.words.length;
+    this.charIndex = 0;
+    this.currentWord = '';
+    this.typeWord();
   }
 
   ngAfterViewInit() {

@@ -40,12 +40,49 @@
 }
 
 @keyframes colorShadowChange {
-  0% { text-shadow: 7px 7px 1px yellow; }
-  25% { text-shadow: 7px 7px 1px cyan; }
-  50% { text-shadow: 7px 7px 1px red; }
-  75% { text-shadow: 7px 7px 1px greenyellow; }
-  100% { text-shadow: 7px 7px 1px purple; }
+  0% { text-shadow: 7px 7px 40px yellow; }
+  25% { text-shadow: 7px 7px 40px cyan; }
+  50% { text-shadow: 7px 7px 40px red; }
+  75% { text-shadow: 7px 7px 40px greenyellow; }
+  100% { text-shadow: 7px 7px 40px purple; }
 }
+
+.word {
+  font-size: 79px;
+  font-weight: 500;
+  /* text-shadow:
+    2px 2px 0 #00cfff,
+   -2px 2px 0 #00cfff,
+    2px -2px 0 #00cfff,
+   -2px -2px 0 #00cfff,
+    0 2px 0 #00cfff,
+    2px 0 0 #00cfff,
+   -2px 0 0 #00cfff,
+    0 -2px 0 #00cfff; */
+    /* color: transparent; */
+    /* background: #00cfff;
+    background-clip: text;
+    -webkit-background-clip: text; */
+  /* background-color: blue */
+  /* text-shadow: 2px 2px 40px rgb(46, 20, 194); */
+  animation: colorShadowChange 30s infinite alternate;
+}
+
+.cursor {
+  font-size: 79px;
+  /* font-weight: 500; */
+  display: inline-block;
+  width: 1px;
+  /* background-color: black; */
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
 
 .wave-ribbon {
   width: 500px;
