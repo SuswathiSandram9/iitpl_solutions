@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VideoService } from '../../video.service';
 
 @Component({
   selector: 'app-expertise',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './expertise.component.css'
 })
 export class ExpertiseComponent {
-  showVideo = false;
+  constructor(private videoService: VideoService) {}
+  
+    play() {
+      this.videoService.open();
+    }
 }

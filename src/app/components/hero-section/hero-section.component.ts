@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VideoService } from '../../video.service';
 
 @Component({
   selector: 'app-hero-section',
@@ -8,16 +9,11 @@ import { Component } from '@angular/core';
 })
 export class HeroSectionComponent {
 
-  // words = ['process', 'future', 'system'];
-  // currentWord = this.words[0];
-  // private wordIndex = 0;
+  constructor(private videoService: VideoService) {}
 
-  // ngOnInit() {
-  //   setInterval(() => {
-  //     this.wordIndex = (this.wordIndex + 1) % this.words.length;
-  //     this.currentWord = this.words[this.wordIndex];
-  //   }, 2000);
-  // }
+  play() {
+    this.videoService.open();
+  }
 
   words = ['process', 'future', 'system'];
   currentWord = '';
