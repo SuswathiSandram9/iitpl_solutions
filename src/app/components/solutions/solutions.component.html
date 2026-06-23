@@ -1,8 +1,23 @@
 <div class="solutions-container">
+  
+  <section class="company-intro">
+    <h1>IMAGE INNOVATION TECHNOLOGY PRIVATE LTD.</h1>
+    <p>
+      Image Innovation Technology Private Ltd. builds practical digital
+      solutions for educational institutions, universities, and organizations
+      that need secure, efficient, and user-friendly systems.
+    </p>
+    <p>
+      Our products combine AI, automation, blockchain-backed verification, and
+      smart management tools to reduce manual effort, improve transparency, and
+      simplify everyday academic operations.
+    </p>
+  </section>
+
   <!-- Hero Section -->
   <div class="hero-section">
     <h2>FINEST OPTIONS FOR YOU FROM US</h2>
-    <button>WATCH DEMO</button>
+    <button (click)="play()">WATCH DEMO</button>
   </div>
 
   <!-- Solutions Section -->
@@ -18,28 +33,41 @@
         </p>
       </div>
 
-      <div class="solution-card">
+      <div routerLink="/qpgenx" class="solution-card">
         <h4>Q-GEN</h4>
         <p>
-          AI-powered knowledge solution that helps with multiple intelligent
-          tools
+          An intelligent question paper generation platform that uses Artificial Intelligence and Blockchain technology to automate, secure, and simplify examination paper creation.
         </p>
       </div>
 
-      <div class="solution-card">
-        <h4>DOC-CHAIN</h4>
-        <p>AI-powered document verification that helps with authenticity</p>
+      <div routerLink="/truscholar" class="solution-card">
+        <h4>TRUSCHOLAR</h4>
+        <p>A blockchain-enabled platform for issuing, managing, verifying, and distributing secure academic credentials and certificates digitally.</p>
       </div>
 
-      <div class="solution-card">
-        <h4>UNI-PASS</h4>
-        <p>AI-powered universal authentication system for easy access</p>
+      <div routerLink="/security-printing-solutions" class="solution-card">
+        <h4>Security Printing Solutions</h4>
+        <p>Advanced security printing solutions designed to protect academic documents from duplication, tampering, and counterfeiting.</p>
       </div>
 
-      <div class="solution-card">
-        <h4>E-PROCURE</h4>
+      <div routerLink="/teslin-security-certificates" class="solution-card">
+        <h4>Teslin Security Certificates</h4>
         <p>
-          Amex, an AI-powered knowledge solution that helps with multiple tasks
+          High-durability security certificates printed on specialized Teslin substrate for enhanced protection and longevity.
+        </p>
+      </div>
+
+      <div routerLink="/academic-documents" class="solution-card">
+        <h4>Academic Documents</h4>
+        <p>
+          Comprehensive printing solutions for educational institutions covering certificates, transcripts, marksheets, and examination records.
+        </p>
+      </div>
+
+      <div routerLink="/examination-documents" class="solution-card">
+        <h4>Examination Documents</h4>
+        <p>
+          Secure examination document printing solutions for colleges, universities, and autonomous institutions.
         </p>
       </div>
     </div>

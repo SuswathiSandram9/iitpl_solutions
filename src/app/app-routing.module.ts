@@ -7,6 +7,12 @@ import { BlogsComponent } from './components/blogs/blogs.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AmexsComponent } from './components/amexs/amexs.component';
 import { ImageSecurityPrintersComponent } from './components/image-security-printers/image-security-printers.component';
+import { QGenComponent } from './components/q-gen/q-gen.component';
+import { TruscholarComponent } from './components/truscholar/truscholar.component';
+import { SecurityPrintingSolutionsComponent } from './components/security-printing-solutions/security-printing-solutions.component';
+import { TeslinSecurityCertificatesComponent } from './components/teslin-security-certificates/teslin-security-certificates.component';
+import { ExaminationDocumentsComponent } from './components/examination-documents/examination-documents.component';
+import { AcademicDocumentsComponent } from './components/academic-documents/academic-documents.component';
 
 const routes: Routes = [
   { path: '', component: HeroSectionComponent },  // Home Page
@@ -15,6 +21,12 @@ const routes: Routes = [
   { path: 'blogs', component: BlogsComponent },  // Blogs Page
   { path: 'contact', component: ContactUsComponent }, // Contact us Page
   { path: 'amexs', component: AmexsComponent }, // Amexs Page
+  { path: 'qgenx', component: QGenComponent }, // QGENX Page
+  { path: 'truscholar', component: TruscholarComponent }, // Tru-Scholar Page
+  { path: 'security-printing-solutions', component: SecurityPrintingSolutionsComponent }, // Security Printing Solutions Page
+  { path: 'teslin-security-certificates', component: TeslinSecurityCertificatesComponent }, // Teslin Security Certificates Page
+  { path: 'examination-documents', component: ExaminationDocumentsComponent }, // Examination Documents Page
+  { path: 'academic-documents', component: AcademicDocumentsComponent }, // Academic Documents Page
   { path: 'image-security-printers', component: ImageSecurityPrintersComponent }, // Image Security Printers Page
 ];
 

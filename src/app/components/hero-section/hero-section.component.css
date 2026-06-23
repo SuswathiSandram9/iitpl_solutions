@@ -40,11 +40,11 @@
 }
 
 @keyframes colorShadowChange {
-  0% { text-shadow: 7px 7px 40px yellow; }
-  25% { text-shadow: 7px 7px 40px cyan; }
-  50% { text-shadow: 7px 7px 40px red; }
-  75% { text-shadow: 7px 7px 40px greenyellow; }
-  100% { text-shadow: 7px 7px 40px purple; }
+  0% { text-shadow: 7px 7px 0px yellow; }
+  25% { text-shadow: 7px 7px 0px cyan; }
+  50% { text-shadow: 7px 7px 0px red; }
+  75% { text-shadow: 7px 7px 0px greenyellow; }
+  100% { text-shadow: 7px 7px 0px purple; }
 }
 
 .word {

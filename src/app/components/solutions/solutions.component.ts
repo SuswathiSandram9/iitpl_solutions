@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VideoService } from '../../video.service';
 
 @Component({
   selector: 'app-solutions',
@@ -7,6 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './solutions.component.css',
 })
 export class SolutionsComponent {
+  constructor(private videoService: VideoService) {}
+
+  play() {
+    this.videoService.open();
+  }
   ngAfterViewInit() {
     const header = document.getElementById('sticky-header');
     if (header) {

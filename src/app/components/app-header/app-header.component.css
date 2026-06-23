@@ -1,7 +1,7 @@
 /* Navbar Styling */
 .navbar {
   background-color: white;
-  padding: 10px 0;
+  /* padding: 8px 0; */
 }
 
 /* Center Navbar Links */
@@ -29,6 +29,41 @@
   text-decoration: none;
 }
 
+.navbar-brand img,
+.navbar-brand .navbar-logo {
+  height: 70px;
+  width: auto;
+}
+
+@media (max-width: 575px) {
+  .navbar-brand img,
+  .navbar-brand .navbar-logo {
+    height: 55px;
+  }
+}
+
+.navbar-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.navbar-brand-text {
+  display: block;
+  width: 100%;
+  margin: 0;
+  line-height: 1.1;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+button.nav-link {
+  background: transparent;
+  border: none;
+  line-height: 1.5;
+}
+
 /* Remove Underline Effect */
 .nav-link.active::after {
   display: none;
@@ -41,9 +76,75 @@
   border: 1px solid rgba(0, 0, 0, 0.2); /* Border for active state */
 }
 
+.nav-item.dropdown.active > .nav-link {
+  font-weight: bold;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav-item.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  margin-left: 8px;
+  vertical-align: 2px;
+}
+
+.dropdown-menu {
+  min-width: 245px;
+  padding: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+}
+
+.dropdown-item {
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #111111;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: normal;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f2f2f2;
+  color: #000000;
+}
+
+.dropdown-item:active {
+  background-color: #111111;
+  color: #ffffff;
+}
+
 /* Contact Button */
 .contact-btn {
   border-radius: 20px;
   font-size: 14px;
   padding: 8px 15px;
+}
+
+@media (max-width: 991px) {
+  .navbar-nav {
+    align-items: flex-start;
+    gap: 8px;
+    padding-top: 12px;
+  }
+
+  .navbar-nav .dot {
+    display: none;
+  }
+
+  .dropdown-menu {
+    width: 100%;
+    min-width: 0;
+    margin-top: 4px;
+    box-shadow: none;
+  }
 }

@@ -1,0 +1,53 @@
+<div class="solution-detail-container" #container>
+  <div class="header">
+    <h1>{{ solution.title }}</h1>
+    <p>{{ solution.subtitle }}</p>
+  </div>
+
+  <div class="banner-container"></div>
+
+  <div class="content">
+    <div class="left">
+      <p *ngFor="let paragraph of solution.intro">{{ paragraph }}</p>
+
+      <h2 *ngIf="solution.sectionHeading">{{ solution.sectionHeading }}</h2>
+
+      <ng-container *ngFor="let feature of solution.features; let index = index">
+        <h3>{{ index + 1 }}. {{ feature.title }}</h3>
+        <p>{{ feature.description }}</p>
+
+        <img
+          *ngIf="shouldShowImageAfter(index)"
+          [src]="solution.image?.src"
+          [alt]="solution.image?.alt"
+          class="feature-img"
+        />
+      </ng-container>
+
+      <p *ngFor="let paragraph of solution.closing">{{ paragraph }}</p>
+
+      <ul *ngIf="solution.bullets?.length">
+        <li *ngFor="let bullet of solution.bullets">{{ bullet }}</li>
+      </ul>
+    </div>
+
+    <div class="solutions-section no-print">
+      <h3>SOLUTIONS</h3>
+      <div class="solution-tabs">
+        <button
+          *ngFor="let tab of solutionTabs"
+          [routerLink]="tab.route"
+          class="tab"
+          [class.active]="tab.route === solution.route"
+        >
+          {{ tab.label }}
+        </button>
+      </div>
+
+      <h3>BROCHURES</h3>
+      <button class="brochure-btn" type="button" (click)="downloadPdf()">
+        PDF DOWNLOAD
+      </button>
+    </div>
+  </div>
+</div>

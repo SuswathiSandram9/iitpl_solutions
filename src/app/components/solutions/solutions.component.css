@@ -32,9 +32,33 @@
   letter-spacing: -2%;
 }
 
+.company-intro {
+  max-width: 900px;
+  margin: 36px auto 20px;
+  padding: 0 24px;
+  color: #000000;
+}
+
+.company-intro h1 {
+  font-size: 34px;
+  font-weight: 900;
+  margin-bottom: 16px;
+  letter-spacing: 0;
+  line-height: 1.2;
+}
+
+.company-intro p {
+  max-width: 760px;
+  margin: 0 auto 12px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #222222;
+}
+
 /* Solutions Section */
 .solutions-content {
-  margin: 40px auto;
+  margin: 30px auto 40px;
   max-width: 800px;
 }
 
@@ -114,4 +138,19 @@
   font-size: 13px;
   font-weight: 600;
   letter-spacing: -2%;
+}
+
+@media (max-width: 768px) {
+  .company-intro {
+    margin-top: 28px;
+  }
+
+  .company-intro h1 {
+    font-size: 25px;
+  }
+
+  .company-intro p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }

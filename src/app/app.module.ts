@@ -16,7 +16,14 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { GettingStartedQgenComponent } from './components/getting-started-qgen/getting-started-qgen.component';
 import { AmexsComponent } from './components/amexs/amexs.component';
 import { ImageSecurityPrintersComponent } from './components/image-security-printers/image-security-printers.component';
-import { VideoDisplayComponent } from './components/video-display/video-display.component'; 
+import { VideoDisplayComponent } from './components/video-display/video-display.component';
+import { QGenComponent } from './components/q-gen/q-gen.component';
+import { TruscholarComponent } from './components/truscholar/truscholar.component'; 
+import { SolutionDetailComponent } from './components/solution-detail/solution-detail.component';
+import { SecurityPrintingSolutionsComponent } from './components/security-printing-solutions/security-printing-solutions.component';
+import { TeslinSecurityCertificatesComponent } from './components/teslin-security-certificates/teslin-security-certificates.component';
+import { AcademicDocumentsComponent } from './components/academic-documents/academic-documents.component';
+import { ExaminationDocumentsComponent } from './components/examination-documents/examination-documents.component'; 
 
 @NgModule({
   declarations: [
@@ -33,7 +40,14 @@ import { VideoDisplayComponent } from './components/video-display/video-display.
     GettingStartedQgenComponent,
     AmexsComponent,
     ImageSecurityPrintersComponent,
-    VideoDisplayComponent
+    VideoDisplayComponent,
+    QGenComponent,
+    TruscholarComponent,
+    SolutionDetailComponent,
+    SecurityPrintingSolutionsComponent,
+    TeslinSecurityCertificatesComponent,
+    AcademicDocumentsComponent,
+    ExaminationDocumentsComponent
   ],
   imports: [
     BrowserModule,

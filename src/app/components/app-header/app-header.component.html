@@ -1,9 +1,9 @@
 <nav id="sticky-header" class="navbar navbar-expand-lg navbar-light fixed-top">
   <div class="container-fluid">
     <!-- Logo -->
-    <a class="navbar-brand" href="#">
-      <img src="assets/images/iitpl_logo.jpg" alt="Logo" height="40" /><br />
-      <b>IITPL.</b>
+    <a class="navbar-brand" routerLink="/">
+      <img class="navbar-logo" src="assets/images/image.jpg" alt="Logo" />
+      <span class="navbar-brand-text"><b>IITPL.</b></span>
     </a>
 
     <!-- Mobile Toggle -->
@@ -29,10 +29,35 @@
           >
         </li>
         <li class="nav-item"><span class="dot">•</span></li>
-        <li class="nav-item">
-          <a routerLink="/solutions" routerLinkActive="active" class="nav-link"
-            >Solutions</a
+        <li class="nav-item dropdown" routerLinkActive="active">
+          <button
+            class="nav-link dropdown-toggle"
+            type="button"
+            id="solutionsDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
+            Solutions
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="solutionsDropdown">
+            <li>
+              <a routerLink="/solutions" class="dropdown-item">Image Innovation Technology Private Ltd.</a>
+            </li>
+            <li>
+              <a routerLink="/image-security-printers" class="dropdown-item"
+                >Image Security Printers</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://knx-portfolio-bay.vercel.app/"
+                class="dropdown-item"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Kronex Digital Solution</a
+              >
+            </li>
+          </ul>
         </li>
         <li class="nav-item"><span class="dot">•</span></li>
         <li class="nav-item">
