@@ -6,6 +6,52 @@
   font-family: "Poppins", sans-serif;
 }
 
+app-root {
+  display: block;
+}
+
+app-root > section.container-fluid {
+  padding: 0;
+}
+
+.hero-section,
+.how-it-started,
+.expertise-section {
+  min-height: clamp(360px, 75vh, 720px);
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.about-us-container {
+  min-height: clamp(360px, 100vh, 760px);
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.how-it-started {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expertise-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .cta-buttons {
   margin-top: 20px;
 }
