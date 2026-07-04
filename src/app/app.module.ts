@@ -9,7 +9,8 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
 import { HowItStartedComponent } from './components/how-it-started/how-it-started.component';
 import { ExpertiseComponent } from './components/expertise/expertise.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
-import { SolutionsComponent } from './components/solutions/solutions.component';
+import { IitplComponent } from './components/iitpl/iitpl.component';
+import { IspComponent } from './components/isp/isp.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { FormsModule } from '@angular/forms';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
@@ -23,7 +24,8 @@ import { SolutionDetailComponent } from './components/solution-detail/solution-d
 import { SecurityPrintingSolutionsComponent } from './components/security-printing-solutions/security-printing-solutions.component';
 import { TeslinSecurityCertificatesComponent } from './components/teslin-security-certificates/teslin-security-certificates.component';
 import { AcademicDocumentsComponent } from './components/academic-documents/academic-documents.component';
-import { ExaminationDocumentsComponent } from './components/examination-documents/examination-documents.component'; 
+import { ExaminationDocumentsComponent } from './components/examination-documents/examination-documents.component';
+import { SolutionsLandingPageComponent } from './components/solutions-landing-page/solutions-landing-page.component'; 
 
 @NgModule({
   declarations: [
@@ -34,7 +36,8 @@ import { ExaminationDocumentsComponent } from './components/examination-document
     HowItStartedComponent,
     ExpertiseComponent,
     AboutUsComponent,
-    SolutionsComponent,
+    IitplComponent,
+    IspComponent,
     BlogsComponent,
     ContactUsComponent,
     GettingStartedQgenComponent,
@@ -47,7 +50,8 @@ import { ExaminationDocumentsComponent } from './components/examination-document
     SecurityPrintingSolutionsComponent,
     TeslinSecurityCertificatesComponent,
     AcademicDocumentsComponent,
-    ExaminationDocumentsComponent
+    ExaminationDocumentsComponent,
+    SolutionsLandingPageComponent
   ],
   imports: [
     BrowserModule,

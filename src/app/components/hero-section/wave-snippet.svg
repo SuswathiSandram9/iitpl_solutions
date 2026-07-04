@@ -1,0 +1,11 @@
+<!-- helper SVG - not used directly by app, kept for reference -->
+<svg viewBox="0 0 800 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd966"/>
+      <stop offset="50%" stop-color="#9be7ff"/>
+      <stop offset="100%" stop-color="#ffd1f0"/>
+    </linearGradient>
+  </defs>
+  <path d="M0 60 C 80 10, 240 110, 400 60 C 560 10, 720 110, 800 60" stroke="url(#g1)" stroke-width="18" fill="none" stroke-linecap="round" />
+</svg>

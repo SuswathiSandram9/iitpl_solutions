@@ -47,5 +47,9 @@ export class TeslinSecurityCertificatesComponent {
     closing: [
       '',
     ],
+    bannerImage: {
+      src: 'assets/images/teslin.jpg',
+      alt: 'Teslin banner',
+    },
   };
 }

@@ -17,23 +17,23 @@
               At ITFM, our mission is to empower educational institutions
               through innovative, AI-driven solutions.
             </p>
-            <button (click)="play()" class="btn-primary">
-              Watch free Demo <i class="bi bi-box-arrow-up-right"></i>
+            <button type="button" (click)="openAmexLink()" class="btn-primary">
+              Explore Amex <i class="bi bi-box-arrow-up-right"></i>
             </button>
           </div>
           <!-- Chat Bubble UI -->
           <div class="chat-floating">
             <div class="chat-message you">
               <span>🧑 You</span>
-              <p class="mb-1">I’d like to create a question paper for Digital Signal Processing</p>
+              <p class="mb-1">I’d like to schedule the end-semester examinations for Computer Science.</p>
             </div>
             <div class="chat-message qgen">
               <span><img src="assets/images/iitpl_logo.jpg" alt="Logo" height="15px" /> Q-Gen</span>
-              <p class="mb-1">Mathematics for grade 10 is ready. Please upload the relevant lecture notes to align with your needs.</p>
+              <p class="mb-1">Exam schedule created. Hall allocation, seating arrangements, invigilator assignments, and admit cards are ready for review.</p>
             </div>
             <div class="chat-message you">
               <span>🧑 You</span>
-              <p class="mb-1">I’d like to include image recollection and computer vision concepts.</p>
+              <p class="mb-1">Please allocate separate halls for students with special accommodations and avoid timetable conflicts.</p>
             </div>
           </div>
         </div>
@@ -49,7 +49,7 @@
               and ensure secure blockchain technology, we maintain tamper-proof
               records.
             </p>
-            <button routerLink="/solutions" class="btn-primary">
+            <button routerLink="/solutions-landing-page" class="btn-primary">
               Solutions <i class="bi bi-box-arrow-up-right"></i>
             </button>
           </div>
@@ -77,12 +77,9 @@
             <button routerLink="/contact" class="btn-primary me-2">
               Contact Us <i class="bi bi-box-arrow-up-right"></i>
             </button>
-            <button routerLink="/image-security-printers" class="btn-secondary">
-              Image Security Printers <i class="bi bi-box-arrow-up-right"></i>
-            </button>
           </div>
           <div class="image-box">
-            <img src="assets/images/founder_image.svg" alt="Founder Image" />
+            <img src="assets/images/founder.jpeg" alt="Founder Image" />
           </div>
         </div>
       </div>

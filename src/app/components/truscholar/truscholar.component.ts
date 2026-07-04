@@ -47,5 +47,9 @@ readonly solution: SolutionDetail = {
     closing: [
       'TruScholar enables institutions to establish trust, eliminate credential fraud, and deliver secure academic records globally.',
     ],
+    bannerImage: {
+      src: 'assets/images/truscholar.jpg',
+      alt: 'TruScholar banner',
+    },
   };
 }

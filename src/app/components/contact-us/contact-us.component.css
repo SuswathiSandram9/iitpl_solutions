@@ -1,8 +1,19 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
 .contact-container {
   text-align: center;
-  padding: 50px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem 1.5rem 2rem;
   background-color: #f8f9fa;
+  box-sizing: border-box;
 }
+
 
 .title {
   font-size: 49px;

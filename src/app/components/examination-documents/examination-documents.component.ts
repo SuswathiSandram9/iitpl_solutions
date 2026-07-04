@@ -28,5 +28,9 @@ export class ExaminationDocumentsComponent {
     closing: [
       '',
     ],
+    bannerImage: {
+      src: 'assets/images/examination.jpg',
+      alt: 'Examination documents banner',
+    },
   };
 }

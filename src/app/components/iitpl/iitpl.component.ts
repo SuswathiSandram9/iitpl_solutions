@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { VideoService } from '../../video.service';
 
 @Component({
-  selector: 'app-solutions',
+  selector: 'app-iitpl',
   standalone: false,
-  templateUrl: './solutions.component.html',
-  styleUrl: './solutions.component.css',
+  templateUrl: './iitpl.component.html',
+  styleUrl: './iitpl.component.css',
 })
-export class SolutionsComponent {
+export class IitplComponent {
   constructor(private videoService: VideoService) {}
 
   play() {

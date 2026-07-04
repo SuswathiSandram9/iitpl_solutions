@@ -9,12 +9,12 @@ import { SolutionDetail } from '../solution-detail/solution-detail.component';
 })
 export class QGenComponent {
   readonly solution: SolutionDetail = {
-    title: 'QGenX',
+    title: 'QPGenX',
     subtitle: 'AI & Blockchain-Based Question Paper Generation System',
     route: '/qpgenx',
     brochureTitle: 'QPGenX Brochure',
     intro: [
-      'QGEN is an advanced AI-powered question paper generation platform developed to help educational institutions create secure, balanced, and syllabus-compliant examination papers within minutes.',
+      'QPGenX is an advanced AI-powered question paper generation platform developed to help educational institutions create secure, balanced, and syllabus-compliant examination papers within minutes.',
     ],
     sectionHeading: 'Key Features',
     features: [
@@ -45,7 +45,9 @@ export class QGenComponent {
       },
     ],
     closing: [
-      'QGEN transforms traditional examination preparation into a secure, intelligent, and efficient digital process.',
-    ],
-  };
+      'QPGenX transforms traditional examination preparation into a secure, intelligent, and efficient digital process.',
+    ],    bannerImage: {
+      src: 'assets/images/qpgenx.jpg',
+      alt: 'QGEN banner',
+    },  };
 }

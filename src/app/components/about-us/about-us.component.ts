@@ -43,4 +43,8 @@ export class AboutUsComponent {
   play() {
     this.videoService.open();
   }
+
+  openAmexLink(): void {
+    window.open('https://amex-iitpl.vercel.app/', '_blank', 'noopener,noreferrer');
+  }
 }

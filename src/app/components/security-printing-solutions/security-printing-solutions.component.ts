@@ -47,5 +47,9 @@ export class SecurityPrintingSolutionsComponent {
     closing: [
       '',
     ],
+    bannerImage: {
+      src: 'assets/images/security.jpg',
+      alt: 'Security printing banner',
+    },
   };
 }

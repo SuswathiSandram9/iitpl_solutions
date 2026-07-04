@@ -34,5 +34,9 @@ export class AcademicDocumentsComponent {
     closing: [
       '',
     ],
+    bannerImage: {
+      src: 'assets/images/academic.jpg',
+      alt: 'Academic documents banner',
+    },
   };
 }

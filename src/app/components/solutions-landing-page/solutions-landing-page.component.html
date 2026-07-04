@@ -1,0 +1,16 @@
+<section class="solutions-landing-page">
+  <div class="cards-grid">
+    <button
+      type="button"
+      class="solution-card"
+      *ngFor="let card of cards"
+      (click)="openLink(card.link)"
+    >
+      <div class="card-content">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
+      </div>
+      <span class="card-action">Explore</span>
+    </button>
+  </div>
+</section>

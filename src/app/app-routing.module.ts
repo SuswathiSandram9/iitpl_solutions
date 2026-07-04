@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
-import { SolutionsComponent } from './components/solutions/solutions.component';
+import { IitplComponent } from './components/iitpl/iitpl.component';
+import { IspComponent } from './components/isp/isp.component';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { AmexsComponent } from './components/amexs/amexs.component';
@@ -13,15 +14,18 @@ import { SecurityPrintingSolutionsComponent } from './components/security-printi
 import { TeslinSecurityCertificatesComponent } from './components/teslin-security-certificates/teslin-security-certificates.component';
 import { ExaminationDocumentsComponent } from './components/examination-documents/examination-documents.component';
 import { AcademicDocumentsComponent } from './components/academic-documents/academic-documents.component';
+import { SolutionsLandingPageComponent } from './components/solutions-landing-page/solutions-landing-page.component';
 
 const routes: Routes = [
   { path: '', component: HeroSectionComponent },  // Home Page
   { path: 'about-us', component: AboutUsComponent },  // About Us Page
-  { path: 'solutions', component: SolutionsComponent },  // Solutions Page
+  { path: 'iitpl', component: IitplComponent },  // IITPL Page
+  { path: 'isp', component: IspComponent },  // ISP Page
+  { path: 'solutions-landing-page', component: SolutionsLandingPageComponent },  // Solutions Landing Page
   { path: 'blogs', component: BlogsComponent },  // Blogs Page
   { path: 'contact', component: ContactUsComponent }, // Contact us Page
   { path: 'amexs', component: AmexsComponent }, // Amexs Page
-  { path: 'qgenx', component: QGenComponent }, // QGENX Page
+  { path: 'qpgenx', component: QGenComponent }, // QPGENX Page
   { path: 'truscholar', component: TruscholarComponent }, // Tru-Scholar Page
   { path: 'security-printing-solutions', component: SecurityPrintingSolutionsComponent }, // Security Printing Solutions Page
   { path: 'teslin-security-certificates', component: TeslinSecurityCertificatesComponent }, // Teslin Security Certificates Page

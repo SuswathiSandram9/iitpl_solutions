@@ -48,6 +48,10 @@ export class AmexsComponent {
       alt: 'Exam Platform',
       afterFeatureIndex: 1,
     },
+    bannerImage: {
+      src: 'assets/images/banner.jpg',
+      alt: 'AMEXS banner',
+    },
     closing: [
       'ITP Labs takes immense pride in its journey of over 20 years, serving as a trusted innovator in educational technology.',
     ],
