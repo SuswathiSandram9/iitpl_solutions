@@ -1,61 +1,45 @@
-/* Hero Section Styling */
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-color: #ffffff;
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .title {
-  font-size: 18px;
+  font-size: 1.15rem;
   font-weight: 500;
-  margin-bottom: 0px;
+  margin: 0 0 0.35rem;
 }
 
 .hero-section h1 {
-  font-size: 79px;
+  font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 500;
-  text-align: center;
-  letter-spacing: -4px;
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: -0.04em;
 }
 
 .future-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: -40px;
-  letter-spacing: -4px;
-}
-
-.animated-text {
-  font-size: 79px;
-  font-weight: 500;
-  color: #111111;
-  text-shadow: 0 0 10px rgba(31, 79, 255, 0.8);
-  box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
+  margin-top: -0.3em;
+  letter-spacing: -0.04em;
 }
 
 .word {
-  font-size: 79px;
+  font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 700;
-  color: #000000; /* black text */
   display: inline-block;
   line-height: 1;
   white-space: pre;
-  text-shadow: 0 0 12px rgba(31, 79, 255, 0.9);
-  position: relative;
-  z-index: 2;
+  transition: color 0.2s ease;
 }
 
 .cursor {
-  font-size: 79px;
-  /* font-weight: 500; */
-  display: inline-block;
-  width: 1px;
-  /* background-color: black; */
+  display: inline-flex;
+  align-items: flex-end;
   animation: blink 1s step-start infinite;
 }
 
@@ -65,49 +49,70 @@
   }
 }
 
-p {
-  font-size: 18px;
-  margin-top: 10px;
-  color: #444;
-}
-
 .description {
-  color: #000000;
-  font-size: 12px;
-  font-weight: 500;
-  font-family: 'Roboto', sans-serif;
-  margin-top: -10px;
+  color: #333;
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 44rem;
+  margin: 0.85rem auto 0;
 }
 
 .cta-buttons {
-  margin-top: 0px;
+  margin-top: 0.85rem;
+}
+
+.cta-buttons .btn-primary,
+.cta-buttons .btn-secondary {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cta-buttons .btn-blue {
+  background-color: blue;
+  color: white;
+  box-shadow: none;
+}
+
+.cta-buttons .btn-blue:hover {
+  background-color: darkblue;
+  color: white;
 }
 
 .sub {
-  color: #6D6D6D;
-  font-size: 10px
+  color: #6d6d6d;
+  font-size: 0.85rem;
+  margin-top: 0.65rem;
 }
 
-@media (max-width: 400px) {
-  .hero-section h1 {
-    font-size: 40px;
+.sub a {
+  color: #1b67f5;
+  text-decoration: none;
+}
+
+.sub a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 575px) {
+  .hero-section h1,
+  .word {
+    font-size: 2.5rem;
   }
-  .animated-text {
-    font-size: 40px;
-    margin-top: 15px;
-  }
-  .cta-buttons .btn-primary {
-    margin-right: 0px;
-  }
-  .cta-buttons .btn-secondary {
-    margin-top: 10px;
+
+  .description {
+    font-size: 0.95rem;
   }
 }
 
-.section-divider {
-  border: none;
-  height: 2px;
-  background: linear-gradient(to right, #d8d8d8, #00000020, #d8d8d8);
-  margin: 40px auto;
-  width: 80%;
+@media (max-height: 700px) {
+  .hero-section h1,
+  .word {
+    font-size: clamp(2.25rem, 7vw, 3.5rem);
+  }
+
+  .description {
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+  }
 }

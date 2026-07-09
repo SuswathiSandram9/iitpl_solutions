@@ -29,7 +29,6 @@ export class AcademicDocumentsComponent {
       { title: 'Diploma Certificates', description: '' },
       { title: 'Course Completion Certificates', description: '' },
       { title: 'Hall Tickets', description: '' },
-      { title: 'Student ID Cards', description: '' },
     ],
     closing: [
       '',

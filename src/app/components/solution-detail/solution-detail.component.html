@@ -1,18 +1,21 @@
 <div class="solution-detail-container" #container>
-  <div class="header">
-    <h1>
-      <a [routerLink]="getBackRoute()" aria-label="Back" style="margin-right: 8px; text-decoration: none; cursor: pointer;">
-        ←
-      </a>
-      {{ solution.title }}
-    </h1>
-    <p>{{ solution.subtitle }}</p>
-  </div>
-
   <div
     class="banner-container"
     [ngStyle]="{ 'background-image': 'url(' + (solution.bannerImage?.src || '/assets/images/banner.jpg') + ')' }"
-  ></div>
+  >
+    <a
+      class="back-btn"
+      [routerLink]="getBackRoute()"
+      aria-label="Back"
+    >
+      ←
+    </a>
+
+    <div class="banner-overlay">
+      <h1>{{ solution.title }}</h1>
+      <p>{{ solution.subtitle }}</p>
+    </div>
+  </div>
 
   <div class="content">
     <div class="left">

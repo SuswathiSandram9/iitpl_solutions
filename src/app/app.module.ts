@@ -25,7 +25,8 @@ import { SecurityPrintingSolutionsComponent } from './components/security-printi
 import { TeslinSecurityCertificatesComponent } from './components/teslin-security-certificates/teslin-security-certificates.component';
 import { AcademicDocumentsComponent } from './components/academic-documents/academic-documents.component';
 import { ExaminationDocumentsComponent } from './components/examination-documents/examination-documents.component';
-import { SolutionsLandingPageComponent } from './components/solutions-landing-page/solutions-landing-page.component'; 
+import { SolutionsLandingPageComponent } from './components/solutions-landing-page/solutions-landing-page.component';
+import { RevolvingGalleryComponent } from './components/revolving-gallery/revolving-gallery.component'; 
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { SolutionsLandingPageComponent } from './components/solutions-landing-pa
     TeslinSecurityCertificatesComponent,
     AcademicDocumentsComponent,
     ExaminationDocumentsComponent,
-    SolutionsLandingPageComponent
+    SolutionsLandingPageComponent,
+    RevolvingGalleryComponent
   ],
   imports: [
     BrowserModule,

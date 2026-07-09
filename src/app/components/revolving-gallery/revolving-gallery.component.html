@@ -1,0 +1,20 @@
+<div class="revolving-gallery" aria-hidden="true">
+  <div class="revolving-gallery__mask"></div>
+  <div class="revolving-gallery__scale">
+    <div class="revolving-gallery__ring">
+      @for (image of images; track image.src) {
+        <div
+          class="revolving-gallery__item"
+          [style.--angle]="image.angle + 'deg'"
+          [style.--radius]="image.radius + 'px'"
+          [style.--size]="image.size + 'px'">
+          <div class="revolving-gallery__item-inner">
+            <div class="revolving-gallery__image">
+              <img [src]="image.src" [alt]="image.alt" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</div>

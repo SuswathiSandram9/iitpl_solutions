@@ -16,9 +16,18 @@ export class HeroSectionComponent {
   }
 
   words = ['process', 'future', 'system'];
+  wordColors: Record<string, string> = {
+    process: '#dc2626',
+    future: '#2563eb',
+    system: '#ffcc00',
+  };
   currentWord = '';
   private wordIndex = 0;
   private charIndex = 0;
+
+  get currentWordColor(): string {
+    return this.wordColors[this.words[this.wordIndex]];
+  }
 
   ngOnInit() {
     this.typeWord();
@@ -40,14 +49,5 @@ export class HeroSectionComponent {
     this.charIndex = 0;
     this.currentWord = '';
     this.typeWord();
-  }
-
-  ngAfterViewInit() {
-    const header = document.getElementById('sticky-header');
-    if (header) {
-      document.querySelector('.hero-section')!.setAttribute(
-        'style', `padding-top: ${header.offsetHeight}px`
-      );
-    }
   }
 }

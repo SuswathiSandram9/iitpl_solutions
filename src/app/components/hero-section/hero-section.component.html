@@ -1,48 +1,44 @@
 <section class="container-fluid">
-  <!-- Hero Section -->
   <div class="hero-section">
-    <h2 class="title">Image Innovation Technology Private Ltd.</h2>
-    <h1>Innovating the</h1>
-    <div class="future-container grid">
-      <span class="word">{{ currentWord }}</span><span class="cursor"><svg width="20" height="100" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg">
-        <!-- Vertical bar -->
-        <rect x="4" y="0" width="1.5" height="32" fill="black" />
-        <!-- Circle (dot), overlaps the bottom edge of the bar -->
-        <circle cx="5" cy="32" r="2" fill="black" />
-      </svg>
-      </span>
-    </div>
-    
-    <p class="description ml-2 mr-4 mt-2">
-      Simplifying management with AI, blockchain, and innovative tech solutions. From autonomous <br>management systems to AI-driven question paper generation, we reduce time and effort,<br> making education administration user-friendly and efficient.
-    </p>
-    
-    <div class="cta-buttons">
-      <button class="btn-primary me-3" routerLink="/solutions">Image Innovation Technology Private Ltd. <i class="bi bi-chevron-right mt-2"></i></button>
-      <button class="btn-secondary" routerLink="/image-security-printers">
-        Image security printers <i class="bi bi-box-arrow-up-right"></i>
-      </button>
-    </div>
+    <app-revolving-gallery></app-revolving-gallery>
+    <div class="hero-content">
+      <h2 class="title">Image Innovation Technology Private Ltd.</h2>
+      <h1>Innovating the</h1>
+      <div class="future-container">
+        <span class="word" [style.color]="currentWordColor">{{ currentWord }}</span
+        ><span class="cursor"
+          ><svg width="20" height="100" viewBox="0 0 10 40" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="0" width="1.5" height="32" fill="black" />
+            <circle cx="5" cy="32" r="2" fill="black" />
+          </svg>
+        </span>
+      </div>
 
-    <div class="sub mt-2">
-      
-  Growth & Digital Strategy Partner —
-  <a
-    href="https://knx-portfolio-bay.vercel.app/"
-    target="_blank"
-    rel="noopener noreferrer">
-    Kronnex Digital & AI
-  </a>
-      <!-- Delivering Expert, Reliable, and Timely Educational Solutions You Can Trust. -->
+      <p class="description">
+        Simplifying management with AI, blockchain, and innovative tech solutions. From autonomous
+        management systems to AI-driven question paper generation, we reduce time and effort,
+        making education administration user-friendly and efficient.
+      </p>
+
+      <div class="cta-buttons">
+        <button class="btn-primary" routerLink="/iitpl">
+          Image Innovation Technology Private Ltd. <i class="bi bi-chevron-right"></i>
+        </button>
+        <button class="btn-secondary btn-blue" routerLink="/image-security-printers">
+          Image security printers <i class="bi bi-box-arrow-up-right"></i>
+        </button>
+      </div>
+
+      <div class="sub">
+        Growth & Digital Strategy Partner —
+        <a href="https://knx-portfolio-bay.vercel.app/" target="_blank" rel="noopener noreferrer">
+          Kronnex Digital & AI
+        </a>
+      </div>
     </div>
   </div>
-  <hr class="section-divider" />
 
   <app-how-it-started></app-how-it-started>
-  <hr class="section-divider" />
-  
   <app-expertise></app-expertise>
-  <hr class="section-divider" />
-
   <app-contact-us></app-contact-us>
 </section>

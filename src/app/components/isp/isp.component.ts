@@ -13,13 +13,4 @@ export class IspComponent {
   play() {
     this.videoService.open();
   }
-
-  ngAfterViewInit() {
-    const header = document.getElementById('sticky-header');
-    if (header) {
-      document
-        .querySelector('.solutions-container')!
-        .setAttribute('style', `padding-top: ${header.offsetHeight}px`);
-    }
-  }
 }

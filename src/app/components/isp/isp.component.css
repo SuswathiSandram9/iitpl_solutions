@@ -1,2 +1,68 @@
 /* Reuse the IITPL page styling for consistency */
 @import url('../iitpl/iitpl.component.css');
+
+:host {
+  display: block;
+  flex: 1;
+}
+
+.solutions-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: calc(var(--header-height, 114px) + 12px) 24px 12px;
+  box-sizing: border-box;
+}
+
+.company-intro {
+  margin: 0 auto 12px;
+}
+
+.company-intro h1 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  margin-bottom: 10px;
+}
+
+.company-intro p {
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+  line-height: 1.55;
+}
+
+.hero-section {
+  padding: 28px 20px;
+}
+
+.solutions-content {
+  margin: 16px auto;
+}
+
+.cards-wrapper {
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.solution-card {
+  padding: 14px;
+}
+
+.cta-section {
+  margin: 16px auto 0;
+  padding: 18px;
+  max-width: 85%;
+}
+
+.cta-section.mb-2 {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .solutions-container {
+    padding: calc(var(--header-height, 98px) + 12px) 16px 10px;
+  }
+
+  .cards-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

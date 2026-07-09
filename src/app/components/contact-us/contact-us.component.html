@@ -1,106 +1,162 @@
 <div class="contact-container">
   <h2 class="title">
-    <img src="assets/images/iitpl_logo.jpg" alt="Logo" height="40" />Contact Us
+    <img src="assets/images/image.jpg" alt="Logo" height="50px" />
+    Contact Us
   </h2>
   <p class="subtitle">Any questions or remarks? Just write us a message!</p>
 
   <div class="contact-content">
     <div class="contact-info">
       <h3 class="contact">Contact Information</h3>
-      <p class="contact-sub mt-4">Say something to start a live chat!</p>
-      <p class="contact-body mt-4">
-        <i class="bi bi-telephone-fill"></i> +91 90801 44794
-      </p>
-      <p class="contact-body mt-4">
-        <i class="bi bi-envelope-fill"></i> imagemicr&#64;gmail.com
-      </p>
-      <p class="contact-body mt-4">
-        <i class="bi bi-geo-alt-fill"></i> Plot No.11, 4th St, Secretariat
-        Colony, Secretariat Nagar, Retteri, Kolathur, Chennai, Tamil Nadu 600099
+      <p class="contact-sub">Say something to start a live chat!</p>
+
+      @for (phone of phones; track phone) {
+        <p class="contact-body">
+          <i class="bi bi-telephone-fill"></i> {{ phone }}
+        </p>
+      }
+
+      @for (email of emails; track email) {
+        <p class="contact-body">
+          <i class="bi bi-envelope-fill"></i> {{ email }}
+        </p>
+      }
+
+      <p class="contact-body">
+        <i class="bi bi-geo-alt-fill"></i> {{ address }}
       </p>
     </div>
 
     <div class="contact-form">
-      <form ngNoForm target="_blank" action="https://formsubmit.co/suswathisandram98@gmail.com" method="POST" >
+      <form #contactForm="ngForm" novalidate (ngSubmit)="sendViaWhatsApp(contactForm)">
         <div class="form-group-row">
           <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" required/>
+            <label for="firstName">First Name *</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              ngModel
+              #firstName="ngModel"
+              required
+              [class.field-invalid]="isInvalid(firstName)"
+            />
+            @if (isInvalid(firstName)) {
+              <span class="field-error">First name is required</span>
+            }
           </div>
 
           <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required/>
+            <label for="lastName">Last Name *</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              ngModel
+              #lastName="ngModel"
+              required
+              [class.field-invalid]="isInvalid(lastName)"
+            />
+            @if (isInvalid(lastName)) {
+              <span class="field-error">Last name is required</span>
+            }
           </div>
         </div>
 
         <div class="form-group-row">
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required/>
+            <label for="email">Email *</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              ngModel
+              #email="ngModel"
+              required
+              email
+              [class.field-invalid]="isInvalid(email)"
+            />
+            @if (isInvalid(email)) {
+              <span class="field-error">
+                @if (email.errors?.['required']) {
+                  Email is required
+                } @else {
+                  Enter a valid email address
+                }
+              </span>
+            }
           </div>
 
           <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" name="phone" required/>
+            <label for="phone">Phone Number *</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              ngModel
+              #phone="ngModel"
+              required
+              minlength="10"
+              [class.field-invalid]="isInvalid(phone)"
+            />
+            @if (isInvalid(phone)) {
+              <span class="field-error">
+                @if (phone.errors?.['required']) {
+                  Phone number is required
+                } @else {
+                  Enter at least 10 digits
+                }
+              </span>
+            }
           </div>
         </div>
 
         <div class="form-group">
-          <label>Select Subject?</label>
-          <div class="radio-group">
-            <label
-              ><input type="radio" name="subject" value="University" />
-              University</label
-            >
-            <label
-              ><input type="radio" name="subject" value="Professional" />
-              Professional</label
-            >
-            <label
-              ><input type="radio" name="subject" value="Freelancer" />
-              Freelancer</label
-            >
-            <label
-              ><input type="radio" name="subject" value="Business" />
-              Business</label
-            >
+          <label>Select Subject? *</label>
+          <div class="radio-group" [class.field-invalid-group]="submitted && !subject">
+            @for (option of subjectOptions; track option) {
+              <label>
+                <input
+                  type="radio"
+                  name="subject"
+                  [value]="option"
+                  [(ngModel)]="subject"
+                />
+                {{ option }}
+              </label>
+            }
           </div>
+          @if (submitted && !subject) {
+            <span class="field-error">Please select a subject</span>
+          }
         </div>
 
         <div class="form-group">
-          <label for="message">Message</label>
-          <textarea type="text" id="message" name="message" required></textarea>
+          <label for="message">Message *</label>
+          <textarea
+            id="message"
+            name="message"
+            ngModel
+            #message="ngModel"
+            required
+            rows="3"
+            [class.field-invalid]="isInvalid(message)"
+          ></textarea>
+          @if (isInvalid(message)) {
+            <span class="field-error">Message is required</span>
+          }
         </div>
 
-        <div class="send-message-container">
-          <img
-            src="assets/images/flying_plane.png"
-            alt="Flying Paper Plane"
-            class="plane-icon"
-          />
-          
+        @if (submitted && (contactForm.invalid || !subject)) {
+          <p class="form-error-summary">Please fill in all required fields before sending.</p>
+        }
+
+        <div class="form-actions">
+          <img src="assets/images/flying_plane.png" alt="" class="plane-icon" aria-hidden="true" />
+          <button type="submit" class="send-message-btn">
+            <img src="assets/images/hand.svg" alt="" /> Send Message
+          </button>
         </div>
-        <button type="submit" class="send-message-btn">
-          <img src="assets/images/hand.svg" /> Send Message
-        </button>
-        <!-- Anti-spam hidden field -->
-        <!-- <input type="text" name="_honey" style="display: none" /> -->
-
-        <!-- Disable CAPTCHA -->
-        <!-- <input type="hidden" name="_captcha" value="false" /> -->
-
-        <!-- Redirect after submit -->
-        <!-- <input
-          type="hidden"
-          name="_next"
-          value="https://yourwebsite.com/thank-you.html"
-        /> -->
-        <script>
-          document.querySelector('form').addEventListener('submit', () => {
-            alert("Form submitted!");
-          });
-        </script>
       </form>
     </div>
   </div>

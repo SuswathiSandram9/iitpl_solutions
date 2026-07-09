@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent },  // About Us Page
   { path: 'iitpl', component: IitplComponent },  // IITPL Page
   { path: 'isp', component: IspComponent },  // ISP Page
-  { path: 'solutions-landing-page', component: SolutionsLandingPageComponent },  // Solutions Landing Page
+  { path: 'solutions', component: SolutionsLandingPageComponent },  // Solutions Landing Page
   { path: 'blogs', component: BlogsComponent },  // Blogs Page
   { path: 'contact', component: ContactUsComponent }, // Contact us Page
   { path: 'amexs', component: AmexsComponent }, // Amexs Page
